@@ -1,0 +1,504 @@
+/* ================================================= */
+/* ======= RESET E CONFIGURAÇÕES GERAIS ======= */
+/* ================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Use a fonte de sua preferência. Segoe UI/Roboto é elegante e moderna */
+    font-family: "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    /* Define a cor de fundo padrão para dark mode, que será vista no footer e header */
+    background-color: #3e4c53;
+    color: #333;
+}
+
+/* ================================================= */
+/* ======= CABEÇALHO E NAVEGAÇÃO ======= */
+/* ================================================= */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2f3e46;
+    /* Azul escuro do cabeçalho */
+    color: #fff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* Sombra suave */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    color: #f9d949;
+    /* Cor de destaque (Amarelo/Dourado) */
+}
+
+/* MENU DE NAVEGAÇÃO */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-weight: 500;
+    transition: 0.3s;
+    padding-bottom: 3px;
+}
+
+nav ul li a:hover,
+nav ul li a.ativo {
+    color: #f9d949;
+    border-bottom: 2px solid #f9d949;
+    /* Sublinhado para ativo/hover */
+}
+
+/* ================================================= */
+/* ======= SEÇÃO HERO (PÁGINA INICIAL) ======= */
+/* ================================================= */
+.hero {
+    background-color: #3e4c53;
+    /* Cor de fundo principal das páginas */
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #f9d949;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    max-width: 600px;
+    margin-bottom: 25px;
+}
+
+/* BOTÕES */
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: all 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-acervo {
+    background-color: #f9d949;
+    color: #000;
+}
+
+.btn-acervo:hover {
+    background-color: #f7c600;
+    transform: translateY(-2px);
+    /* Efeito sutil no hover */
+}
+
+.btn-sobre {
+    background-color: #2b1db8;
+    color: #fff;
+}
+
+.btn-sobre:hover {
+    background-color: #1e138f;
+    transform: translateY(-2px);
+}
+
+/* ================================================= */
+/* ======= ESTILOS ESPECÍFICOS PARA PÁGINAS INTERNAS (SOBRE) ======= */
+/* ================================================= */
+
+/* Fundo da seção principal de conteúdo */
+main {
+    background-color: #3e4c53;
+    color: #f1f1f1;
+    min-height: 90vh;
+    padding: 60px 0;
+}
+
+/* Div para centralizar e limitar a largura do conteúdo interno */
+.content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Título Principal - "Sobre o Projeto" */
+#sobre h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f9d949;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Subtítulo */
+#sobre .subtitulo {
+    font-size: 1.1rem;
+    color: #ddd;
+    /* NOVO: Alinhamento à esquerda */
+    text-align: left;
+    /* NOVO: Ajusta a margem para alinhar à esquerda dentro do content-wrapper */
+    max-width: 100%;
+    margin: 0 0 50px 0;
+    /* Margem superior, direita, inferior, esquerda */
+}
+
+
+/* Títulos das Subseções (h3) */
+#sobre h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #f9d949;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+/* Títulos Específicos (h4) */
+#sobre h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f9d949;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Parágrafos gerais */
+#sobre p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #d1d1d1;
+}
+
+/* Estilo para a seção Introdução (Texto e Imagem lado a lado) */
+#introducao .conteudo {
+    display: flex;
+    gap: 40px; 
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+    margin-top: 20px;
+}
+
+.texto-introducao {
+    /* Define o espaço para o texto, permitindo que a imagem ocupe 45% */
+    flex: 1; 
+}
+
+/* Imagem e legenda (Figure) */
+#introducao figure {
+    flex: 0 0 45%; /* A imagem ocupa 45% da largura */
+    margin: 0;
+    text-align: justify; /* Alinha o texto da legenda justificado */
+}
+
+#introducao figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#introducao figcaption {
+    font-size: 0.90rem;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+
+/* Lista de Objetivos Específicos (ul) */
+.objetivos-especificos ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.objetivos-especificos ul li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #d1d1d1;
+}
+
+/* Criação do bullet point personalizado (Amarelo) */
+.objetivos-especificos ul li::before {
+    content: "•";
+    color: #f9d949;
+    font-size: 1.5rem;
+    line-height: 1;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* ================================================= */
+/* ======= RODAPÉ ======= */
+/* ================================================= */
+footer {
+    background-color: #2f3e46;
+    color: #d1d1d1;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 10px 0 25px 0;
+    border-top: 1px solid #3d4f58;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+/* ================================================= */
+/* ======= ESTILOS ESPECÍFICOS PARA PÁGINA ACERVO.HTML ======= */
+/* ================================================= */
+
+/* Reutilizando estilos base do main/content-wrapper/subtitulo, etc. */
+
+#acervo-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#acervo-hero h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f9d949;
+    margin-bottom: 5px;
+}
+
+/* Título de seção (Vídeos FPV, Artigo Científico) */
+.secao-titulo {
+    text-align: center;
+    /* NOVO: Centraliza o texto */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #f9d949;
+    /* Amarelo/Dourado */
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    position: relative;
+
+    /* Usando pseudoelemento para a linha centralizada  */
+    border-bottom: none;
+    /* Remove a linha 100% larga para usar o ::after */
+}
+
+/* Linha de destaque centralizada sob o título */
+.secao-titulo::after {
+    content: '';
+    display: block;
+    width: 200px;
+    /* Largura da linha */
+    height: 2px;
+    background-color: #3d4f58;
+    margin: 10px auto 0 auto;
+    /* Centraliza a linha horizontalmente */
+}
+
+/* Ícone dentro do título */
+.secao-titulo .icone-destaque {
+    color: #2b1db8;
+    /* Cor secundária (Azul) para o ícone */
+    margin-right: 10px;
+}
+
+/* Container de Cards (para vídeos e artigos) */
+.cards-container {
+    display: flex;
+    gap: 30px;
+    /* Espaço entre os cards */
+    margin-bottom: 40px;
+}
+
+/* Estilo Básico do Card */
+.card {
+    flex: 1;
+    /* Faz os cards ocuparem espaço igual (padrão 50%) */
+    background-color: #2f3e46;
+    /* Fundo mais escuro que o main */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card h4 {
+    font-size: 1.4rem;
+    color: #ddd;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #b0b0b0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilos Específicos para Cards de Vídeo */
+.video-embed {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-embed iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Estilos Específicos para Cards de Artigos */
+.artigo-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* NOVO ESTILO: Estilo para Card Único (Artigo) ocupar largura total */
+.card.full-width {
+    flex: 0 0 100%;
+    /* Garante que ele ocupe 100% da largura disponível */
+}
+
+/* Ajuste de alinhamento para o botão dentro do card full-width */
+.artigo-card.full-width .btn-card-pdf {
+    align-self: center;
+    /* Alinha o botão à esquerda e impede que ele estique 100% */
+
+}
+
+.btn-card-pdf {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    background-color: #2b1db8;
+    /* Azul Escuro */
+    color: #fff;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-card-pdf:hover {
+    background-color: #1e138f;
+
+}
+
+.btn-card-pdf .icone-destaque {
+    margin-right: 5px;
+}
+
+
+/* ================================================= */
+/* ======= RESPONSIVIDADE PARA ACERVO (ADICIONAL) ======= */
+/* ================================================= */
+
+@media (max-width: 900px) {
+
+    /* Em telas menores, quebrar os cards em colunas (todos, incluindo os vídeos) */
+    .cards-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* ================================================= */
+/* ======= RESPONSIVIDADE (MEDIA QUERIES) ======= */
+/* ================================================= */
+
+/* Para tablets e telas médias (quebrar Introdução) */
+@media (max-width: 850px) {
+
+    /* Ajuste para telas menores na seção Introdução */
+    #introducao .conteudo {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    #introducao figure {
+        flex: 1 1 100%;
+    }
+}
+
+/* Para celulares e telas pequenas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Reduz o padding vertical em telas pequenas */
+    main {
+        padding: 40px 0;
+    }
+
+    #sobre h2 {
+        font-size: 2rem;
+    }
+
+    #sobre h3 {
+        font-size: 1.5rem;
+    }
+
+    #sobre p,
+    #sobre .subtitulo {
+        font-size: 1.20rem;
+    }
+}
