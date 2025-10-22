@@ -165,12 +165,9 @@ main {
 #sobre .subtitulo {
     font-size: 1.1rem;
     color: #ddd;
-    /* NOVO: Alinhamento à esquerda */
-    text-align: left;
-    /* NOVO: Ajusta a margem para alinhar à esquerda dentro do content-wrapper */
+    text-align: justify;
     max-width: 100%;
     margin: 0 0 50px 0;
-    /* Margem superior, direita, inferior, esquerda */
 }
 
 
